@@ -56,7 +56,7 @@
 ## shippings テーブル
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
-| postal_code      | integer    | null :false                    |
+| postal_code      | string     | null :false                    |
 | prefecture_id    | integer    | null :false                    |
 | municipalities   | string     | null :false                    |
 | address          | string     | null :false                    |

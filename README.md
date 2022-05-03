@@ -37,7 +37,7 @@
 - belongs_to :item_category
 - belongs_to :item_status
 - belongs_to :delivery_charge
-- belongs_to :prefectures
+- belongs_to :prefecture
 - belongs_to :date_of_shipment
 
 ## orders テーブル

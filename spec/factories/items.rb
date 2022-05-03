@@ -12,6 +12,7 @@ FactoryBot.define do
     delivery_charge_id  { 3 }
     prefecture_id       { 3 }
     date_of_shipment_id { 3 }
-    item_price       { Faker::Number.binary(digits: 4) }
+    item_price          { Faker::Number.within(range: 300..9999999) }
+    
   end
 end

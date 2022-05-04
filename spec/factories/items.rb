@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :item do
-  association :user
+    association :user
 
     after(:build) do |item|
       item.image.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png')
@@ -12,7 +12,6 @@ FactoryBot.define do
     delivery_charge_id  { 3 }
     prefecture_id       { 3 }
     date_of_shipment_id { 3 }
-    item_price          { Faker::Number.within(range: 300..9999999) }
-    
+    item_price          { Faker::Number.within(range: 300..9_999_999) }
   end
 end

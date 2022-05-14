@@ -59,6 +59,11 @@ RSpec.describe OrderShipping, type: :model do
         @order_shipping.valid?
         expect(@order_shipping.errors.full_messages).to include('Telephone number is invalid')
       end
+      it 'telephone_nmuberに半角数字以外が含まれている場合は購入できない' do
+        @order_shipping.telephone_number = '09-12345678'
+        @order_shipping.valid?
+        expect(@order_shipping.errors.full_messages).to include("Telephone number is invalid")
+      end
       it 'tokenが空では保存できないこと' do
         @order_shipping.token = ''
         @order_shipping.valid?

@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
 
   def index
     @order_shipping = OrderShipping.new
-    redirect_to root_path if @item.order
+    redirect_to root_path if @item.user_id == current_user.id
   end
 
   def create

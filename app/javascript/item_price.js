@@ -5,10 +5,10 @@ priceInput.addEventListener('input', () => {
   const inputValue = priceInput.value;
   
   const addTaxDom = document.getElementById("add-tax-price");
-  addTaxDom.innerHTML = (Math.floor(inputValue * 0.1));
+  const value_result = Math.floor(inputValue * 0.1);
+  addTaxDom.innerHTML = value_result;
 
-  const salesProfit = document.getElementById("profit")
-  const value_result = inputValue * 0.1
+  const salesProfit = document.getElementById("profit");
   salesProfit.innerHTML = (inputValue - value_result);
 });
 });
